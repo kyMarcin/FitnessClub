@@ -1,6 +1,7 @@
 package sample.controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sample.Main;
@@ -13,7 +14,8 @@ import java.io.IOException;
  */
 public class UserLayoutController {
 
-    public void handleBackButtonAction(ActionEvent actionEvent) throws IOException {
+    @FXML
+    private void handleBackButtonAction(ActionEvent actionEvent) throws IOException {
         Stage mainStage = Main.getMainStage();
         Scene startScene = Main.getStartScene();
         StageManager.setScene(mainStage, startScene);

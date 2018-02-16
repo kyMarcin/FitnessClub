@@ -119,7 +119,7 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Text>
-            <Button mnemonicParsing="false" onAction="#handleAddRoomsButton" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#handleRoomsButtonAction" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
          </children>
       </GridPane>
     </children>

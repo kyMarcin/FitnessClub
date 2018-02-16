@@ -13,6 +13,8 @@ import java.nio.file.Paths;
  */
 public class SceneManager {
 
+    private SceneManager(){}
+
     public static Scene getNewScene(String layoutLocation) throws IOException {
         URL layoutURL = Paths.get(layoutLocation).toUri().toURL();
         Parent parent = FXMLLoader.load(layoutURL);

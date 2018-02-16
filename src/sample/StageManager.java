@@ -10,6 +10,8 @@ import java.io.IOException;
  */
 public class StageManager {
 
+    private StageManager(){}
+
     public static void setScene(Stage stage, Scene scene) throws IOException {
         stage.setScene(scene);
     }
