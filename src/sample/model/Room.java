@@ -13,17 +13,18 @@ public class Room {
     private StringProperty roomName;
     private SimpleObjectProperty<BigDecimal> pricePerHour;
 
+
     public Room() {
         roomID = new SimpleIntegerProperty();
         roomName = new SimpleStringProperty();
         pricePerHour = new SimpleObjectProperty<>();
     }
 
-    public int getRoomID() {
+    public int getRoomID(){
         return roomID.get();
     }
 
-    public IntegerProperty getRoomIDProperty() {
+    public IntegerProperty getRoomIDProperty(){
         return roomID;
     }
 
@@ -31,12 +32,11 @@ public class Room {
         this.roomID.set(roomID);
     }
 
-
-    public String getRoomName() {
+    public String getRoomName(){
         return roomName.get();
     }
 
-    public StringProperty getRoomNameProperty() {
+    public StringProperty getRoomNameProperty(){
         return roomName;
     }
 
@@ -44,16 +44,15 @@ public class Room {
         this.roomName.set(roomName);
     }
 
-
-    public BigDecimal getPricePerHour() {
+    public BigDecimal  getPricePerHour(){
         return pricePerHour.get();
     }
 
-    public SimpleObjectProperty<BigDecimal> getPricePerHourProperty() {
+    public SimpleObjectProperty<BigDecimal> getPricePerHourProperty(){
         return pricePerHour;
     }
 
-    public void setPricePerHour(BigDecimal pricePerHour) {
+    public void setPricePerHour(BigDecimal  pricePerHour) {
         this.pricePerHour.set(pricePerHour);
     }
 }

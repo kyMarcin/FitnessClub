@@ -15,7 +15,9 @@ import java.io.IOException;
  */
 public class AdministratorLayoutController {
 
-    private static final String ROOMS_LAYOUT_LOCATION = "src/sample/gui/datamanipulation/RoomsLayout.fxml";
+    private static final String ROOM_LAYOUT_LOCATION = "src/sample/gui/datamanipulation/RoomLayout.fxml";
+    private static final String TICKET_LAYOUT_LOCATION = "src/sample/gui/datamanipulation/TicketLayout.fxml";
+    private static final String DISCOUNT_TYPE_LAYOUT_LOCATION = "src/sample/gui/datamanipulation/DiscountTypeLayout.fxml";
 
     @FXML
     private void handleBackButtonAction(ActionEvent actionEvent) throws IOException {
@@ -26,7 +28,18 @@ public class AdministratorLayoutController {
 
     @FXML
     private void handleRoomsButtonAction(ActionEvent actionEvent) throws IOException {
-        Scene addRoomsScene = SceneManager.getNewScene(ROOMS_LAYOUT_LOCATION);
-        StageManager.openNewWindow(addRoomsScene);
+        Scene roomScene = SceneManager.getNewScene(ROOM_LAYOUT_LOCATION);
+        StageManager.openNewWindow(roomScene);
+    }
+
+    @FXML
+    private void handleTicketButtonAction(ActionEvent actionEvent) throws IOException {
+        Scene ticketScene = SceneManager.getNewScene(TICKET_LAYOUT_LOCATION);
+        StageManager.openNewWindow(ticketScene);
+    }
+
+    public void handleDiscountButtonAction(ActionEvent actionEvent) throws IOException {
+        Scene discountScene = SceneManager.getNewScene(DISCOUNT_TYPE_LAYOUT_LOCATION);
+        StageManager.openNewWindow(discountScene);
     }
 }

@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import sample.model.Room;
-import sample.model.RoomDAO;
+import sample.model.dao.RoomDAO;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
@@ -18,7 +18,7 @@ import java.sql.SQLException;
 /**
  * Created by Marcin on 13.02.2018.
  */
-public class RoomsLayoutController {
+public class RoomLayoutController {
 
     @FXML
     private TextField roomNameTextField;

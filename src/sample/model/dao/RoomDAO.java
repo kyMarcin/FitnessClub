@@ -1,8 +1,10 @@
-package sample.model;
+package sample.model.dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import sample.database.DBConnection;
+import sample.database.QueryProvider;
+import sample.model.Room;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -15,11 +17,12 @@ import java.sql.SQLException;
  */
 public class RoomDAO {
 
-    private static final String TABLE_NAME = "ROOM";
-    private static final String INSERT_STATEMENT = "INSERT INTO " + TABLE_NAME + " VALUES (?,?)";
-    private static final String SELECT_BY_ID_STATEMENT = "SELECT * FROM " + TABLE_NAME + " WHERE RoomID = ?";
-    private static final String SELECT_ALL_STATEMENT = "SELECT * FROM " + TABLE_NAME;
-    private static final String DELETE_ALL_STATEMENT = "DELETE FROM " + TABLE_NAME;
+    private static final String TABLE_NAME = "Room";
+    private static final String ID_COLUMN_NAME = "RoomID";
+    private static final String INSERT_STATEMENT = QueryProvider.getInsertQuery(TABLE_NAME, 2);
+    private static final String SELECT_BY_ID_STATEMENT = QueryProvider.getSelectByQuery(TABLE_NAME, ID_COLUMN_NAME);
+    private static final String SELECT_ALL_STATEMENT = QueryProvider.getSelectAllQuery(TABLE_NAME);
+    private static final String DELETE_ALL_STATEMENT = QueryProvider.getDeleteAllQuery(TABLE_NAME);
 
     private RoomDAO() {
     }
