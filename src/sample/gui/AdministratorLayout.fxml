@@ -40,7 +40,7 @@
                         <Font size="22.0" />
                     </font>
                 </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj stanowiska pracy" GridPane.rowIndex="2">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stanowiska Pracy" GridPane.rowIndex="2">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -48,7 +48,7 @@
                         <Insets left="10.0" />
                     </GridPane.margin>
                 </Text>
-                <Button mnemonicParsing="false" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                <Button mnemonicParsing="false" onAction="#jobPositionButtonAction" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
             </children>
         </GridPane>
         <GridPane GridPane.rowIndex="1">
@@ -62,7 +62,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj pracowników">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pracownicy">
                     <GridPane.margin>
                         <Insets left="10.0" />
                     </GridPane.margin>
@@ -70,8 +70,8 @@
                         <Font size="20.0" />
                     </font>
                 </Text>
-                <Button mnemonicParsing="false" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj wypłaty" GridPane.rowIndex="1">
+                <Button mnemonicParsing="false" onAction="#handleEmployeeButtonAction" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wypłaty" GridPane.rowIndex="1">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -80,7 +80,7 @@
                     </GridPane.margin>
                 </Text>
                 <Button mnemonicParsing="false" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj zniżki" GridPane.rowIndex="2">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zniżki" GridPane.rowIndex="2">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -102,7 +102,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj karnety">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Karnety">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -111,7 +111,7 @@
                     </GridPane.margin>
                 </Text>
                 <Button mnemonicParsing="false" onAction="#handleTicketButtonAction" text="Dodaj" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj sale" GridPane.rowIndex="1">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sale" GridPane.rowIndex="1">
                     <font>
                         <Font size="20.0" />
                     </font>

@@ -18,6 +18,9 @@ public class AdministratorLayoutController {
     private static final String ROOM_LAYOUT_LOCATION = "src/sample/gui/datamanipulation/RoomLayout.fxml";
     private static final String TICKET_LAYOUT_LOCATION = "src/sample/gui/datamanipulation/TicketLayout.fxml";
     private static final String DISCOUNT_TYPE_LAYOUT_LOCATION = "src/sample/gui/datamanipulation/DiscountTypeLayout.fxml";
+    private static final String EMPLOYEE_LAYOUT_LOCATION = "src/sample/gui/datamanipulation/EmployeeLayout.fxml";
+    private static final String JOB_POSITION_LAYOUT_LOCATION = "src/sample/gui/datamanipulation/JobPositionLayout.fxml";
+
 
     @FXML
     private void handleBackButtonAction(ActionEvent actionEvent) throws IOException {
@@ -38,8 +41,21 @@ public class AdministratorLayoutController {
         StageManager.openNewWindow(ticketScene);
     }
 
-    public void handleDiscountButtonAction(ActionEvent actionEvent) throws IOException {
+    @FXML
+    private void handleDiscountButtonAction(ActionEvent actionEvent) throws IOException {
         Scene discountScene = SceneManager.getNewScene(DISCOUNT_TYPE_LAYOUT_LOCATION);
         StageManager.openNewWindow(discountScene);
+    }
+
+    @FXML
+    private void handleEmployeeButtonAction(ActionEvent actionEvent) throws IOException {
+        Scene employeeScene = SceneManager.getNewScene(EMPLOYEE_LAYOUT_LOCATION);
+        StageManager.openNewWindow(employeeScene);
+    }
+
+    @FXML
+    private void jobPositionButtonAction(ActionEvent actionEvent) throws IOException {
+        Scene jobPositionScene = SceneManager.getNewScene(JOB_POSITION_LAYOUT_LOCATION);
+        StageManager.openNewWindow(jobPositionScene);
     }
 }

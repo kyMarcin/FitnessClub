@@ -17,9 +17,9 @@ import java.sql.SQLException;
 public class DiscountTypeDAO {
 
     private static final String TABLE_NAME = "DiscountType";
-    private static final String ID_COLUMN_NAME = "DiscountName";
+    private static final String DISCOUNT_NAME_COLUMN_NAME = "DiscountName";
     private static final String INSERT_STATEMENT = QueryProvider.getInsertQuery(TABLE_NAME,2);
-    private static final String SELECT_BY_NAME_STATEMENT = QueryProvider.getSelectByQuery(TABLE_NAME, ID_COLUMN_NAME);
+    private static final String SELECT_BY_NAME_STATEMENT = QueryProvider.getSelectByQuery(TABLE_NAME, DISCOUNT_NAME_COLUMN_NAME);
     private static final String SELECT_ALL_STATEMENT = QueryProvider.getSelectAllQuery(TABLE_NAME);
     private static final String DELETE_ALL_STATEMENT = QueryProvider.getDeleteAllQuery(TABLE_NAME);
 

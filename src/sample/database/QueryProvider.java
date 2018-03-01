@@ -19,7 +19,7 @@ public class QueryProvider {
     }
 
     public static String getSelectByQuery(String tableName, String columnName) {
-        String resultQuery = "SELECT * FROM " + tableName + " WHERE "+ columnName + "= ?";
+        String resultQuery = "SELECT * FROM " + tableName + " WHERE " + columnName + "= ?";
         return resultQuery;
     }
 
@@ -31,6 +31,15 @@ public class QueryProvider {
     public static String getDeleteAllQuery(String tableName) {
         String resultQuery = "DELETE FROM " + tableName;
         return resultQuery;
+    }
+
+    public static String getExecProcQuery(String procName, int noParameters) {
+        StringBuilder resultQuery = new StringBuilder("EXEC " + procName + " ");
+        for(int i=0; i<noParameters - 1; ++i) {
+            resultQuery.append("?,");
+        }
+        resultQuery.append("?");
+        return resultQuery.toString();
     }
 
 }
