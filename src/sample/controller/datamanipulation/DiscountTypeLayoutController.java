@@ -8,9 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Paint;
 import sample.model.DiscountType;
 import sample.model.dao.DiscountTypeDAO;
+import sample.window.SceneManager;
 
 import java.sql.SQLException;
 
@@ -50,11 +50,10 @@ public class DiscountTypeLayoutController {
             discountType.setDiscountName(discountNameTextField.getText());
             discountType.setPercentDiscount(Float.parseFloat(percentTextField.getText()));
             DiscountTypeDAO.insertDiscountType(discountType);
-            resultLabel.setTextFill(Paint.valueOf("#0fe77e"));
-            resultLabel.setText("Zniżka została dodana");
+            SceneManager.setLabel(resultLabel, SceneManager.Color.GREEN, "Zniżka została dodana");
         } catch (SQLException | ClassNotFoundException e) {
-            resultLabel.setTextFill(Paint.valueOf("#da0f0f"));
-            resultLabel.setText("Niepoprawne dane");
+            SceneManager.setLabel(resultLabel, SceneManager.Color.RED, "Niepoprawne dane");
+            e.printStackTrace();
         }
     }
 

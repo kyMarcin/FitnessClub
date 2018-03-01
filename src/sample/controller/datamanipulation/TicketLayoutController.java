@@ -8,9 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Paint;
 import sample.model.Ticket;
 import sample.model.dao.TicketDAO;
+import sample.window.SceneManager;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
@@ -63,12 +63,10 @@ public class TicketLayoutController {
             ticket.setNoPersons(Integer.parseInt(noPersonsTextField.getText()));
             ticket.setNoDays(Integer.parseInt(noDaysTextField.getText()));
             TicketDAO.insertTicket(ticket);
-            resultLabel.setTextFill(Paint.valueOf("#0fe77e"));
-            resultLabel.setText("Karnet został dodany");
+            SceneManager.setLabel(resultLabel, SceneManager.Color.GREEN, "Karnet został dodany");
         } catch (Exception e) {
+            SceneManager.setLabel(resultLabel, SceneManager.Color.RED, "Niepoprawne dane");
             e.printStackTrace();
-            resultLabel.setTextFill(Paint.valueOf("#da0f0f"));
-            resultLabel.setText("Niepoprawne dane");
         }
     }
 

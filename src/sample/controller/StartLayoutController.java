@@ -6,8 +6,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import sample.Main;
-import sample.SceneManager;
-import sample.StageManager;
+import sample.window.SceneManager;
+import sample.window.StageManager;
 
 import java.io.IOException;
 

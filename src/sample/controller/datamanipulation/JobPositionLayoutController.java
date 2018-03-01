@@ -7,9 +7,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Paint;
 import sample.model.JobPosition;
 import sample.model.dao.JobPositionDAO;
+import sample.window.SceneManager;
 
 import java.sql.SQLException;
 
@@ -42,12 +42,10 @@ public class JobPositionLayoutController {
         jobPosition.setJobPositionName(jobPositionNameTextField.getText());
         try {
             JobPositionDAO.insertJobPosition(jobPosition);
-            resultLabel.setTextFill(Paint.valueOf("#0fe77e"));
-            resultLabel.setText("Stanowisko zostało dodane");
+            SceneManager.setLabel(resultLabel, SceneManager.Color.GREEN, "Stanowisko zostało dodane");
         } catch (SQLException | ClassNotFoundException e) {
+            SceneManager.setLabel(resultLabel, SceneManager.Color.RED, "Niepoprawne dane");
             e.printStackTrace();
-            resultLabel.setTextFill(Paint.valueOf("#da0f0f"));
-            resultLabel.setText("Niepoprawne dane");
         }
     }
 

@@ -1,4 +1,4 @@
-package sample;
+package sample.window;
 
 import javafx.scene.Scene;
 import javafx.stage.Stage;

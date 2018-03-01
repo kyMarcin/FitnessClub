@@ -7,11 +7,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Paint;
 import sample.model.Employee;
 import sample.model.JobPosition;
 import sample.model.dao.EmployeeDAO;
 import sample.model.dao.JobPositionDAO;
+import sample.window.SceneManager;
 
 import java.math.BigDecimal;
 import java.sql.Date;
@@ -133,12 +133,10 @@ public class EmployeeLayoutController {
                     EmployeeDAO.insertEmployeeJobPosition(JobPositionDAO.selectByJobPositionName(jobPosition.getText()), employee);
                 }
             }
-            resultLabel.setTextFill(Paint.valueOf("#0fe77e"));
-            resultLabel.setText("Pracownik został dodany");
+            SceneManager.setLabel(resultLabel, SceneManager.Color.GREEN, "Pracownik został dodany");
         } catch (Exception e) {
+            SceneManager.setLabel(resultLabel, SceneManager.Color.RED, "Niepoprawne dane");
             e.printStackTrace();
-            resultLabel.setTextFill(Paint.valueOf("#da0f0f"));
-            resultLabel.setText("Niepoprawne dane");
         }
     }
 
